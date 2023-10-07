@@ -1,0 +1,35 @@
+def calcularValorDeEntrada():
+    while True:
+        nombre = input("Ingrese su nombre: ")
+        while True:
+            try:
+                edad = int(input("Ingrese su edad: "))
+                respuesta = ""
+                while edad <0:
+                    print ("La edad no puede ser negativa")
+                    edad = int(input("Ingrese su edad: "))
+                if edad >=0 and edad <= 4:
+                    respuesta = f'{nombre} entra gratis al cine'
+                elif edad >= 5 and edad <= 17:
+                    respuesta = f'{nombre} paga $1000'
+                elif edad >= 18 and edad <= 120:
+                    respuesta = f'{nombre} paga $2000'
+                else:
+                    respuesta = f'{nombre} no puede ingresar al cine'
+                print(respuesta)
+                print("Gracias por utilizar nuestro sistema")
+                print("¿Desea calcular otro valor de entrada? Si/No")
+                decision = input().title()
+                #upper = convierte todo el texto en mayúscula
+                #lower = convierte todo el texto en minuscula
+                #title = convierte la primera letra de cada palabra en mayuscula
+                if decision != "Si":
+                    return "Gracias por utilizar nuestro sistema"
+                else: 
+                    break           
+            except:
+                print("La edad ingresada no es un numero")
+    
+        
+        
+print (calcularValorDeEntrada()) 
