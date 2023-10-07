@@ -30,6 +30,4 @@ def calcularValorDeEntrada():
             except:
                 print("La edad ingresada no es un numero")
     
-        
-        
 print (calcularValorDeEntrada()) 
